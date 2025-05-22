@@ -1,0 +1,211 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+    background: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.header-logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.header-logo img {
+    height: 70px;
+    margin-right: 0.5rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    color: #555;
+}
+
+/* Main content styles */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem 3rem;
+    justify-items: start;
+}
+
+.apps-grid a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color from parent */
+}
+
+.app-card {
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    text-align: left;
+    box-shadow: none;
+    transition: none;
+    width: 100%;
+    max-width: none;
+    display: flex;
+    align-items: flex-start;
+}
+
+.app-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.app-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 2rem 0 0;
+    background: none;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.app-icon i {
+    font-size: 2.5rem;
+    color: #6366f1;
+}
+
+.app-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-card h2 {
+    margin-bottom: 0.2rem;
+    color: #1f2937;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.app-card p {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #f5f5f7;
+    color: #555;
+    margin-top: 4rem;
+}
+
+.social-icons {
+    margin-bottom: 1rem; /* Space below icons and above copyright */
+}
+
+.social-icons a {
+    color: #555; /* Icon color */
+    font-size: 1.5rem; /* Icon size */
+    margin: 0 0.5rem; /* Space between icons */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.social-icons a:hover {
+    color: #333; /* Darker color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        padding: 2rem 1rem 1rem;
+        align-items: center;
+    }
+
+    .header-logo {
+        position: static;
+        top: auto;
+        left: auto;
+        margin-bottom: 1rem;
+        justify-content: center;
+        font-size: 1.3rem;
+    }
+
+    .header-logo img {
+        height: 40px;
+        margin-right: 0.4rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        margin-top: 0;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .apps-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem 0;
+    }
+
+    .app-card {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .app-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 1.5rem 0 0;
+    }
+
+    .app-card h2 {
+        font-size: 1.15rem;
+    }
+
+    .app-card p {
+        font-size: 0.85rem;
+    }
+} 
